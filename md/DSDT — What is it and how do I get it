@@ -1,0 +1,128 @@
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.insanelymac.com](https://www.insanelymac.com/forum/topic/278170-dsdt-%E2%80%94-what-is-it-and-how-do-i-get-it/)
+
+**DSDT**
+
+**Background:**
+
+  
+ACPI (Advanced Configuration and Power Interface) is an open industry specification co-developed by Hewlett-Packard, Intel, Microsoft, Phoenix, and Toshiba that defines hardware and software interfaces that enable OS-directed configuration and Power Management (OSPM) to enumerate and configure motherboard devices, and manage their power.
+
+**Wikipedia:**  
+The tables allow description of system hardware in a platform-independent manner, and are presented as either fixed-formatted data structures or in AML. The main AML table is the DSDT (differentiated system description table)
+
+The DSDT is the largest and most important table because this is where the motherboard devices are described. As the DSDT, along with other ACPI tables, is stored in the BIOS only on-board hardware is described. The goal is to bypass this often faulty table because of optimization for Windows by a custom one where the declarations are adjusted to the needs of Mac OS X in order to maximize compatibility.
+
+**Use for Hackintoshes**
+
+By loading an edited DSDT via the Chameleon boot loader instead of the factory one, the following things can be achieved:
+
+*   faking device-ids via DSDT can replace legacy/injector kexts
+*   updates may disable modified or legacy/injector kexts but cannot disable DSDT patches
+*   DSDT edits can enable sleep, native speedstepping
+*   extensive edits can boost the boot process
+
+**Do i really need it?**
+
+No, to get a functional Hackintosh you don't need a DSDT. But having one can make your system running more stable, lighter (editing this one table replace many extra files).  
+ 
+
+**How to extract the DSDT**
+
+**Mac OS X:**  
+Be sure no custom/modified DSDT is injected yet.
+
+[Script](http://api.cld.me/Fpac/download/dsdt.sh.zip) by zhell.  
+Run in terminal. The script extracts all ACPI tables to /users/your username/ACPI  
+There are several tools like DSDTSE, Chameleon Wizard.
+
+**Clover bootloade**r - Using the GUI
+
+In Clover GUI, press **F4** button, and then boot your OS X normally.
+
+When OS X is already initialized, mount/open the EFI partition, and you can find all your ACPI tables in **/EFI/Clover/ACPI/origin/**
+
+**Linux** - via Terminal and Live-CD/DVD:
+
+```
+cat /proc/acpi/dsdt > dsdt.aml
+```
+
+**Windows:**  
+AIDA64 or similar tools
+
+**.dsl / .aml — Compile and Decompile**
+
+When extracted from the system the DSDT and the other tables are in the ACPI Machine Language (File extension .aml).  
+To make edits, the DSDT needs to be decompiled (File extension .dsl).
+
+The program for compiling and decompiling ACPI tables is called iASL. The latest version for Mac OS X can be downloaded [here](https://www.insanelymac.com/index.php?showtopic=189272).
+
+**Compiling Errors:**
+
+Using newer iASL versions than the original DSDT was compiled with will often cause compiling errors. To fix the errors and adapt the new code guidelines also check [this topic](https://www.insanelymac.com/index.php?showtopic=189272).  
+ 
+
+**Editing DSDT**
+
+DSDT.dsl files can be edited with any text editor.
+
+We will talk about DSDT patches in a later post in this topic but this can take some time because we want to give detailed explanations and background info to make the patches available for hopefully any hardware.
+
+A good method is using [Textmate](http://macromates.com/) and selecting C++ markup highlighting.
+
+[![](https://www.insanelymac.com/uploads/monthly_04_2012/post-407466-0-72791300-1334228724_thumb.png)](https://www.insanelymac.com/uploads/monthly_04_2012/post-407466-0-72791300-1334228724.png)
+
+There are also utilities that include the iasl compiler like:  
+[DSDTEditor](https://www.insanelymac.com/index.php?showtopic=223205)  
+[DSDTSE](http://www.osx86.net/files/file/3097-dsdt-simple-editor-dsdtse-v143/)
+
+[MaciASL](https://sourceforge.net/projects/maciasl/?source=recommended) - Is the most actual DSDT editor.
+
+After you applyed the patches, you need save your DSDT as .aml - **E.g:** DSDT.aml  
+ 
+
+**Why DSDT files by others can cause problems**
+
+Even small hardware differences will result in different tables and can cause problems. To be sure a that a modified DSDT is compatible with your system, compare the two files.
+
+Following lines can cause problems:
+
+```
+OperationRegion (BIOS, SystemMemory, xx(some hex value)xx
+OperationRegion (^LPCR, SystemMemory, xx(some hex value)xx
+```
+
+If these values are different in your DSDT, replace the hex values on the other modified DSDT with those from your own.  
+ 
+
+**Verifying that the custom DSDT is loaded:**
+
+First be sure your file is named DSDT.aml and placed in /DSDT.aml or /Extra/DSDT.aml.  
+You made / have a custom DSDT and see no changes and your not sure that the DSDT is used and injected by the boot-loader.
+
+Here are some ways to check the loading of a DSDT:
+
+Use bdmesg.
+
+bdmesg ships with the Chameleon boot loader and goes in /usr/bin. bdmesg can be run from Terminal after startup so that you may examine what Chameleon is doing while it boots your Hackintosh.
+
+  
+Excerpt from **bdmesg** output, last line shows DSDT.aml loading:
+
+```
+Loading Darwin 10.7
+Loading kernel cache /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache
+Read HFS+ file: [hd(0,2)/System/Library/Caches/com.apple.kext.caches/Startup/kernelcache] 4096 bytes.
+Read HFS+ file: [hd(0,2)/System/Library/Caches/com.apple.kext.caches/Startup/kernelcache] 18150026 bytes.
+Read HFS+ file: [hd(0,1)/Extra/DSDT.aml] 22762 bytes.
+```
+
+Extract your DSDT on OS X. If you get your modified DSDT, that means it's loaded.
+
+........................................................................................................  
+1.0 first draft by iLeopod 28.03.2012  
+2.0 edited version with contributions by Gringo Vermelho  
+3.0 editing completely broke formatting, all code stripped from post. Minor fixes to spelling and grammar
+
+**Edited August 11, 2016 by Allan**  
+Updated 04/29
