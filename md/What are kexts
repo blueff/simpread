@@ -1,0 +1,17 @@
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.macbreaker.com](http://www.macbreaker.com/2012/01/what-are-kexts.html)
+
+[![](https://4.bp.blogspot.com/-pYgZqd_7SRg/Tx9B-11UQ4I/AAAAAAAAATE/Yd1CpRuGY6k/s200/kext.png)](http://4.bp.blogspot.com/-pYgZqd_7SRg/Tx9B-11UQ4I/AAAAAAAAATE/Yd1CpRuGY6k/s1600/kext.png)  
+**Last Updated on February 23, 2016**
+
+Kext files are essentially drivers for Mac OS X. "Kext" stands for Kernel Extension; kext files "extend" Mac OS X's kernel, the core part of the operating system, by providing additional code to be loaded when your computer boots."Hackintoshes"often require special kexts to enable sound, ethernet, and more. Some Hackintosh-specific kexts are modified versions of existing Mac OS X kexts, such as AppleHDA.kext. Other kexts are extra additions to the normal list of kexts that OS X runs on startup. In the end, all of these Hackintosh kexts serve the same purpose: to add support to hardware that isn't officially supported by Apple.  
+  
+Technically, kexts aren't individual files. In fact, .kext"files"are essentially packaged like .zip files. If you copy a .kext file onto a Windows installation, it becomes a folder. That's because that's what kexts are-- folders. Much like Apple's .app files, you can access the inside of a kext by right-clicking the kext file and clicking "Show Package Contents". Once you've entered the contents of the kext file, you will be able to edit the plist (settings) files and make other modifications, if necessary. Editing the contents of kext files is occasionally necessary to activate certain graphics card kexts or fix glitchy kexts. However, we won't go into that process here.
+
+Location of Kexts
+
+*   Most kext files within Mac OS X are located in **/System/Library/Extensions** by default. 
+*   The popular post-installation tool [Multibeast](http://tonymacx86.com/downloads) (which is essentially just a collection of kexts packaged with an installer) places its kexts in **/Library/Extensions**. 
+*   [Clover Bootloader](http://www.macbreaker.com/2015/10/set-boot-flags-arguments-options-clover-unibeast.html), which is now the most popular bootloader for Hackintoshes, also keeps a couple of kexts within its [EFI partition](http://www.macbreaker.com/2016/02/a-quick-guide-to-your-hackintoshs-efi.html), in **/EFI/CLOVER/kexts**. However, these kexts aren't meant to be fiddled with-- they're just the bare minimum number of kexts required to boot Mac OS X, in case you need to use Clover as a rescue tool of sorts.
+*   Before the release of Mac OS X Lion, Hackintosh-specific kexts used to be installed to **/Extra/Extensions**, but that folder is now outdated (_unless_ you are using the [myHack](http://www.macbreaker.com/2012/06/difference-between-unibeast-myhack-and.html) installation tool). 
+
+**SEE ALSO: [How to manually install kexts with Kextbeast](http://www.macbreaker.com/2012/01/how-to-manually-install-kexts.html)**
