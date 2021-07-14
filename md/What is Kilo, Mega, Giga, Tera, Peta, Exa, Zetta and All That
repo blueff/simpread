@@ -1,0 +1,100 @@
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [searchstorage.techtarget.com](https://searchstorage.techtarget.com/definition/Kilo-mega-giga-tera-peta-and-all-that)
+
+> Prefix multipliers such as kilo, mega, giga, tera, peta, exa, zetta and all that are used in data sto......
+
+Kilo, mega, giga, tera, peta, exa, zetta are among the list of binary prefixes used to denote the quantity of something, such as a [byte](https://searchstorage.techtarget.com/definition/byte) or [bit](https://whatis.techtarget.com/definition/bit-binary-digit) in computing and telecommunications. Sometimes called _prefix multipliers_, these prefixes are also used in electronics and physics. Each multiplier consists of a one-letter abbreviation and the prefix it stands for.
+
+In communications, electronics and physics, multipliers are defined in [powers of 10](https://whatis.techtarget.com/definition/scientific-notation-power-of-10-notation), from 10-24 to 1024, proceeding in increments of three [orders of magnitude](https://whatis.techtarget.com/definition/order-of-magnitude) -- 103 or 1,000. In IT and data storage, multipliers are defined in powers of two, from 210 to 280, proceeding in increments of 10 orders of magnitude -- 210 or 1,024.
+
+Examples of quantities or phenomena in which power-of-10 prefix multipliers apply include frequency -- including computer [clock speeds](https://whatis.techtarget.com/definition/clock-speed) -- physical mass, power, energy, electrical voltage and electrical current. Power-of-10 multipliers are also used to define binary data speeds. For example, 1 kilobit per second (kbps) is equal to 103, or 1,000 bits per second ([bps](https://searchnetworking.techtarget.com/definition/bits-per-second)); 1 megabit per second ([Mbps](https://searchnetworking.techtarget.com/definition/Mbps)) is equal to 106, or 1,000,000 bps. The lowercase k is the technically correct symbol for kilo when it represents 103, although the uppercase K is often used.
+
+![](https://cdn.ttgtmedia.com/rms/onlineImages/storage-prefixes_and_multipliers_mobile.png)
+
+When binary data is stored in memory or fixed media, such as a hard disk or drive, [magnetic tape](https://searchdatabackup.techtarget.com/definition/magnetic-tape) or [CD-ROM](https://whatis.techtarget.com/definition/CD-ROM), power-of-two multipliers are used. Technically, the uppercase K should be used for kilo when it represents 210. Therefore, 1 kilobyte ([KB](https://searchstorage.techtarget.com/definition/kilobyte)) is 210, or 1,024 bytes; 1 megabyte ([MB](https://searchstorage.techtarget.com/definition/megabyte)) is 220, or 1,048,576 bytes.
+
+The choice of power-of-10 versus power-of-two prefix multipliers can appear random. It helps to remember that multiples of bits are almost always expressed in powers of 10, while multiples of bytes are usually expressed in powers of two. Data speed is rarely expressed in bytes per second, and data storage or memory is seldom expressed in bits.
+
+### History and origin of kilo, mega and more
+
+The prefix _kilo_ (1,000) first came into existence between 1865 and 1870. Though _mega_ is used these days to mean "extremely good, great or successful," its scientific meaning is 1 million.
+
+_Giga_ comes from the Greek word for giant, and the first use of the term is believed to have taken place at the 1947 conference of the International Union of Pure and Applied Chemistry. _Tera_ (1 trillion) comes from the Greek word _teras_ or _teratos,_ meaning "marvel, monster," and has been in use since approximately 1947.
+
+The prefixes _exa_ (1 quintillion) and _peta_ (1 quadrillion) were added to the International System of Units (SI) in 1975. However, the origin and history of _peta_ with data measurement terms is unclear. _Z__etta_ (1 sextillion) was added to the SI metric prefixes in 1991.
+
+When the prefixes are added to the term _byte_, it creates units of measurement ranging from 1,000 bytes (kilobyte) to 1 sextillion bytes ([zettabyte](https://searchstorage.techtarget.com/definition/zettabyte)) of data storage capacity. A megabyte is 1 million bytes of data storage capacity, according to the IBM Dictionary of Computing.
+
+A gigabyte ([GB](https://searchstorage.techtarget.com/definition/gigabyte)) is equivalent to about 1 billion bytes. There are two standards for measuring the number of bytes in a gigabyte: base-10 and base-2. Base-10 uses the decimal system to show that 1 GB equals one to the 10th power of bytes, or 1 billion bytes. This is the standard most data storage manufacturers and consumers use today. Computers typically use the base-2, or binary, form of measurement. Base-2 has 1 GB as equal to 1,073,741,824 bytes. The discrepancy between base-10 and base-2 measurements became more distinct as vendors began to manufacture data storage media with more capacity.
+
+A terabyte ([TB](https://searchstorage.techtarget.com/definition/terabyte)) is equal to approximately 1 trillion bytes, or 1,024 GB. A petabyte ([PB](https://searchstorage.techtarget.com/definition/petabyte)) is equal to two to the 50th power of bytes. There are 1,024 TB in a PB, and about 1,024 PB equal 1 exabyte ([EB](https://searchstorage.techtarget.com/definition/exabyte)). A zettabyte is equal to about 1,000 EB, or 1 billion TB.
+
+![](https://cdn.ttgtmedia.com/rms/onlineImages/storage-common_data_storage_measurements_mobile.png)
+
+When it comes to quantifying just how much data storage capacity is offered by kilobytes, megabytes and so on, consider the following chart:
+
+![](https://cdn.ttgtmedia.com/rms/onlineImages/storage-realworld_data_storage_capacity_mobile.png)
+
+### Terabyte vs. petabyte: What would it look like?
+
+In his book, _The Singularity is Near_, futurist Raymond Kurzweil estimated the capacity of a human being's functional memory to be 1.25 TB. This means that the memories of 800 human beings fit into 1 PB of storage.
+
+If the average MP3 encoding is approximately 1 MB per second ([MBps](https://searchstorage.techtarget.com/definition/megabytes-per-second)), and the average song lasts about four minutes, then a petabyte of songs could play continuously for more than 2,000 years. If the average smartphone camera photo is 3 MB, and the average printed photo is 8.5-inches wide, a petabyte of photos placed side by side would be more than 48,000 miles long. That is almost long enough to wrap around the equator twice. According to Wes Biggs, CTO at Adfonic, 1 PB can store the DNA of the entire population of the United States and then clone them twice.
+
+If you counted all the bits in 1 PB of storage at a rate of 1 bps, it would take 285 million years, according to data analysts from Deloitte Analytics. A bit is a binary digit, either a 0 or 1; a byte is eight binary digits long. If you counted 1 bps, it would take 35.7 million years.
+
+### Yottabytes and data storage
+
+The future of data storage may be the [yottabyte](https://searchstorage.techtarget.com/definition/yottabyte). It's a measure of storage capacity equal to approximately 1,000 zettabytes, 1 trillion terabytes, a million trillion megabytes or 1 septillion bytes.
+
+Written in decimal form, a yottabyte looks like this: 1,208,925,819,614,629,174,706,176. The prefix _yotta_ is based on the Greek letter iota. According to Paul McFedries' book _Word Spy_, it would take 86 trillion years to download a 1 yottabyte file; by comparison, the entire contents of the Library of Congress would equal just 10 TB.
+
+According to a 2010 Gizmodo article, storing a yottabyte of data on terabyte-size disk drives would require 1 billion city block-size data centers, equal to combining the states of Rhode Island and Delaware. As of late 2016, memory density had grown to the point where a yottabyte could be stored on [SDX cards](https://searchstorage.techtarget.com/definition/Secure-Digital-card) occupying no more than twice the size of the Hindenberg.
+
+_See_ [Kibi, mebi, gibi, tebi, pebi and all that](https://searchstorage.techtarget.com/definition/Kibi-mebi-gibi-tebi-pebi-and-all-that)_, which are relatively new prefixes designed to express power-of-two multiples._
+
+This was last updated in September 2019
+
+#### Continue Reading About Kilo, mega, giga, tera, peta, exa, zetta and all that
+
+*   ['How many bytes for...' explains storage capacities and requirements in real-world terms.](https://searchstorage.techtarget.com/definition/How-many-bytes-for)
+
+*   [Use new tech to meet capacity planning needs](https://searchstorage.techtarget.com/tip/Making-a-storage-capacity-plan-that-doesnt-bust-your-budget)
+
+#### Dig Deeper on Data storage management
+
+*   [![](https://cdn.ttgtmedia.com/visuals/digdeeper/1.jpg)
+    
+    ##### zettabyte
+    
+    ![](https://cdn.ttgtmedia.com/rms/onlineimages/fitzgibbons_laura.jpg)
+    
+    By: Laura Fitzgibbons
+    
+    ](https://searchstorage.techtarget.com/definition/zettabyte)
+*   [![](https://cdn.ttgtmedia.com/visuals/digdeeper/2.jpg)
+    
+    ##### byte
+    
+    ![](https://cdn.ttgtmedia.com/rms/onlineImages/sullivan_erin.jpg)
+    
+    By: Erin Sullivan
+    
+    ](https://searchstorage.techtarget.com/definition/byte)
+*   [![](https://cdn.ttgtmedia.com/visuals/digdeeper/3.jpg)
+    
+    ##### exbibyte (EiB)
+    
+    ![](https://cdn.ttgtmedia.com/rms/onlineImages/peterson_stacey.jpg)
+    
+    By: Stacey Peterson
+    
+    ](https://searchstorage.techtarget.com/definition/exbibyte-EiB)
+*   [![](https://cdn.ttgtmedia.com/visuals/digdeeper/4.jpg)
+    
+    ##### zebibyte (ZiB)
+    
+    ![](https://cdn.ttgtmedia.com/rms/onlineImages/peterson_stacey.jpg)
+    
+    By: Stacey Peterson
+    
+    ](https://searchstorage.techtarget.com/definition/zebibyte-ZiB)
